@@ -1,0 +1,199 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-color:#FF5114;
+
+}
+body{
+    background-color: #FEFBE9;
+}
+
+.main-color{
+    background-color: var(--primary-color);
+}
+
+.text-main-color
+{
+    color: #FF5114;
+}
+.easy-color{
+    background-color: #DBFCE7;
+}
+
+.main-border{
+    border: 1px solid var(--primary-color);
+
+}
+.img{
+width: 40px;
+border: 2px solid var(--primary-color);
+border-radius: 50%;
+}
+.img:hover{
+    cursor: pointer;
+}
+.nav-icon i:hover{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.row>*{
+    padding-left: 0;
+}
+.rate{
+    top: 20px;
+    left: 10px;
+}
+.review{
+    font-size: 14px;
+}
+.tag{
+    font-size: 15px;
+    bottom: 10px;
+    left: 20px;
+    width: 90%;
+}
+.back{
+    background-color: #FFEDD4;
+padding: 10px;}
+.icons button:hover{
+background-color: #FFD6A7;
+}
+.nav-link{
+    color: gray;
+}
+.nav-link:focus span,
+.nav-link:focus i{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #FF5114;
+    color: var(--primary-color);
+    border-collapse: collapse;
+}
+
+.tab-content{
+    height: 350px;
+}
+/* ================>ingredients-list<==================== */
+.ingredients-list,
+.instructions-list{
+  list-style: none; 
+  padding: 10px;
+  padding-bottom: 0;
+  counter-reset: my-counter; 
+}
+
+.ingredients-list li,
+.instructions-list li{
+  counter-increment: my-counter; 
+  display: flex;
+  align-items: center; 
+  
+ 
+}
+ol, ul{
+    padding-left: 10px;
+}
+.ingredients-list li::before{
+     width: 24px;                
+  height: 24px;                
+  border-radius: 50%;
+   font-size: 12px;
+
+}
+.instructions-list li:before{
+    content:  counter(my-counter);
+     width: 40px;                
+  height: 40px;                
+  border-radius: 12px;
+
+}
+.ingredients-list li::before,
+.instructions-list li:before{
+  content: counter(my-counter); 
+  background-color: var(--primary-color);   
+  color: #ffffff;             
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;   
+ flex-shrink: 0;
+  font-weight: bold;
+  margin-right: 15px;       
+}
+/* =================>scroll<============ */
+.instructions-scroll-container {
+  max-height: 320px;       
+  overflow-y: auto;       
+  padding-right: 12px;  
+}
+
+.instructions-scroll-container::-webkit-scrollbar {
+  width: 5px;             
+}
+
+.instructions-scroll-container::-webkit-scrollbar-track {
+  background: #f8f9fa;    
+  border-radius: 10px;
+}
+
+.instructions-scroll-container::-webkit-scrollbar-thumb {
+  background: #ffccbc;    /* لون المقبض الفاتح مثل التصميم */
+  border-radius: 10px;
+}
+
+.instructions-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #ff5722;    /* لون المقبض عند الهوفر */
+}
+
+/* 3. تنسيق القائمة والأرقام في دوائر برتقالية */
+.instructions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: custom-counter;
+}
+
+.instructions-list li {
+  counter-increment: custom-counter;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 15px;
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
+.instructions-list li::before {
+  content: counter(custom-counter);
+
+}
+
+
+
+
+
+
+
+
+
+.nutrition-icon{
+    background-color: #F9FAFB;
+}
+.btn:hover{
+    background-color: #FFEDD4;
+}
+
+.tip-card{
+    border-left: 4px solid #FFB900;
+}
+
+
+.rotate{
+    background: linear-gradient(to right,
+    #fd7843 ,#f56b35,#ee5d24);
+    transition: 0.3s;
+}
+.rotate:hover{
+    background: var(--primary-color);
+transform: scale(1.1);}

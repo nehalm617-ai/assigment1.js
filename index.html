@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>What's For Dinner</title>
+  </head>
+  <body>
+    <nav class="navbar bg-white px-5 d-flex justify-content-between">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center gap-2">
+          <div class="logo-icon rounded-circle main-color text-center p-2">
+            <i class="fa-solid fa-utensils text-white fs-5"></i>
+          </div>
+
+          <div
+            class="brand d-flex flex-column align-items-center justify-content-start"
+          >
+            <h1 class="fw-bold my-0 fs-4">What's For Dinner</h1>
+            <p class="fs-6 mb-0">Your daily meal inspiration</p>
+          </div>
+        </a>
+        <div class="nav-icon d-flex align-items-center gap-4 fs-5">
+          <i class="fa-solid fa-bookmark"></i>
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <i class="fa-solid fa-gear"></i>
+          <div class="img rounded-circle">
+            <img
+              src="./imgs/avatar-4 (2).jpg"
+              alt="person"
+              class="w-100 object-fit-cover d-block rounded-circle"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="container mt-5">
+        <div class="row bg-white rounded-4 overflow-hidden main-border">
+
+          <!-- ===============ImagePart=========== -->
+          <div class="col-lg-5 col-md-12">
+            <div class="image position-relative object-fit-cover h-100">
+              <img src="./imgs/photo-1455619452474-d2be8b1e70cd.avif"
+                alt="" class="w-100 d-block h-100 object-fit-cover" id="image" />
+
+              <div class="rate position-absolute bg-body rounded-5 px-3 py-2">
+                <i
+                  class="fa-solid fa-star"
+                  style="color: rgb(255, 212, 59)"
+                ></i>
+                <span id="rate" class="fw-bold">4.5</span>
+                <span id="review" class="text-muted review">(189 reviews)</span>
+              </div>
+
+              <div class="tag px-3 py-3 rounded-4 text-center d-flex align-items-center justify-content-around bg-white position-absolute gap-5"
+              >
+                <div class="time text-center my-2">
+                  <i class="fa-solid fa-clock text-main-color fs-4"></i>
+                  <p  class="mb-0 text-muted fs-6">Prep Time</p>
+                  <span id="prepTime" class="fw-bold">10 min</span>
+                </div>
+                <div class="cook text-center my-2">
+                  <i
+                    class="fa-solid fa-fire-burner fs-4"
+                    style="color: rgb(240, 73, 52)"
+                  ></i>
+                  <p class="mb-0 fs-6 text-muted">Cook Time</p>
+                  <span id="cookTime" class="fw-bold">5 min</span>
+                </div>
+                <div class="users text-center my-2">
+                  <i
+                    class="fa-solid fa-users fs-4"
+                    style="color: rgb(116, 192, 252)"
+                  ></i>
+                  <p class="mb-0 text-muted fs-6">Servings</p>
+                  <span id="people" class="fw-bold">2 people</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+<!-- ====================endImagePart=============== -->
+      
+          <div class="col-lg-7 col-md-12 p-3 ">
+            <div class="padges mt-4 mb-2">
+              <span id="padgeOne" class="badge rounded-pill text-success easy-color px-3 py-2"
+                >Easy</span
+              >
+              <span id="padgeTwo" class="badge rounded-pill text-primary bg-info px-3 py-2"
+                >Italian</span
+              >
+            </div>
+
+<!--====================== mainTitle ================-->
+
+            <div class="title d-flex align-items-center justify-content-between"
+            >
+              <h2 id="title" class="fw-bold">Caprese Sandwich</h2>
+              <div class="icons d-flex gap-2">
+                <button
+                  class="btn rounded-3 p-2 bg-main-light d-flex align-items-center back justify-content-center"
+                >
+                  <i class="fa-solid fa-bookmark text-main-color"></i>
+                </button>
+
+                <button
+                  class="btn rounded-3 p-2 bg-main-light d-flex align-items-center back justify-content-center"
+                >
+                  <i class="fa-solid fa-share-nodes text-main-color"></i>
+                </button>
+              </div>
+            </div>
+            <p id="paragraphe" class="text-muted fs-6">
+              Fresh Italian sandwich with mozzarella, tomato, and basil
+            </p>
+
+ <div class="alert alert-danger d-none" role="alert" id="longPrepAlert">
+   <i class="fa-solid fa-triangle-exclamation"></i>
+              Long prep time, plan ahead!</div>
+
+<!--=====================nab&tabs======================-->
+
+
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button
+                  class="nav-link active fw-bold"
+                  id="nav-home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-home"
+                  aria-selected="true"
+                >
+                  <i class="fa-solid fa-list-check"></i>
+                  <span>Ingredients</span>
+                </button>
+                <button
+                  class="nav-link fw-bold"
+                  id="nav-profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-profile"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-book-open"></i>
+                  <span>Instructions</span>
+                </button>
+                <button
+                  class="nav-link fw-bold"
+                  id="nav-contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-contact"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-chart-pie"></i> <span>Nutrition</span>
+                </button>
+                <button
+                  class="nav-link fw-bold"
+                  id="nav-chef-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-chef"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-chef"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-lightbulb"></i> <span>Chef's Tips</span>
+                </button>
+              </div>
+            </nav>
+            <hr />
+
+<!--====================Start data===================-->
+
+            <div class="tab-content  mt-3 rounded-3 " id="nav-tabContent">
+              <div
+                class="tab-pane fade show active back"
+                id="nav-home"
+                role="tabpanel"
+                aria-labelledby="nav-home-tab"
+                tabindex="0"
+              >
+              <div class="ingredients-list px-0">
+                  <ol id="ingredientsList" >
+                  <li class="mb-3">
+                    <span>
+                      1 ciabatta bread
+                    </span>
+                  </li>
+                  <li class="mb-3"> <span>
+                    200g fresh mozzarella, sliced
+                  </span></li>
+                  <li class="mb-3"><span>
+                    2 large tomatoes, sliced
+                  </span></li>
+                  <li class="mb-3"><span>Fresh basil leaves</span></li>
+                  <li class="mb-3"><span>3 tablespoons pesto</span></li>
+                  <li class="mb-3"> <span>2 tablespoons balsamic glaze</span></li>
+                  <li class="mb-3"><span>Olive oil</span></li>
+                  <li class="mb-3"><span>Salt and pepper</span></li>
+                </ol>
+              </div>
+              </div>
+
+
+
+              <div
+                class="tab-pane fade"
+                id="nav-profile"
+                role="tabpanel"
+                aria-labelledby="nav-profile-tab"
+                tabindex="0"
+              >
+<div class="instructions-scroll-container">
+  <ol id="instructionsList" class="instructions-list">
+    <li class="mb-4">Divide ground beef into 4 equal portions. Form into patties, making a small indent in the center.</li>
+    <li class="mb-4">Season patties generously with salt and pepper on both sides.</li>
+    <li class="mb-4">Heat a grill or skillet over high heat. Cook patties for 4-5 minutes per side for medium.</li>
+    <li class="mb-4">Add cheese slices in the last minute of cooking and cover to melt.</li>
+    <li class="mb-4">Toast burger buns lightly on the grill or in a pan.</li>
+    <li class="mb-4">Assemble burgers with lettuce, tomato, onion, pickles, and your favorite sauce.</li>
+  </ol>
+</div>
+              </div>
+
+
+
+              <div
+                class="tab-pane fade"
+                id="nav-contact"
+                role="tabpanel"
+                aria-labelledby="nav-contact-tab"
+                tabindex="0"
+              >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+<div class="nutrition-icon p-3 rounded-3 d-flex mb-2 align-items-center justify-content-between">
+    <div class="icon-tag d-flex align-items-center gap-2">
+          <button
+                  class="btn rounded-3 p-2 back d-flex align-items-center back justify-content-center"
+                >
+<i class="fa-solid fa-fire text-main-color"></i>         
+       </button>
+       <span>Calories
+</span> 
+   </div>
+<span class="fw-bold" id="calnumber">420 kcal</span>
+</div>
+<div class="nutrition-icon p-3 rounded-3 d-flex mb-2 align-items-center justify-content-between">
+    <div class="icon-tag d-flex align-items-center gap-2">
+          <button class="btn rounded-3 p-2 bg-warning-subtle text-warning d-flex align-items-center back justify-content-center">
+<i class="fa-solid fa-wheat-awn"></i>
+       </button>
+       <span>Carbohydrates</span> 
+   </div>
+<span class="fw-bold" id="carb">22g</span>
+</div>
+<div class="nutrition-icon p-3 rounded-3 d-flex mb-2 align-items-center justify-content-between">
+    <div class="icon-tag d-flex align-items-center gap-2">
+          <button
+                  class="btn rounded-3 p-2 bg-success-subtle text-success d-flex align-items-center back justify-content-center"
+                >
+<i class="fa-brands fa-pagelines"></i>       </button>
+       <span>Fiber
+</span> 
+   </div>
+<span class="fw-bold" id="fiber">5g</span>
+</div>
+                        </div>
+                        <div class="col-6">
+
+<div class="nutrition-icon p-3 rounded-3 d-flex mb-2 align-items-center justify-content-between">
+    <div class="icon-tag d-flex align-items-center gap-2">
+          <button class="btn rounded-3 p-2 bg-info-subtle text-primary  d-flex align-items-center back justify-content-center">
+<i class="fa-solid fa-dumbbell"></i>     </button>
+       <span>Protein
+</span> 
+   </div>
+<span class="fw-bold" id="protien">26g</span>
+</div>
+<div class="nutrition-icon p-3 rounded-3 d-flex mb-2 align-items-center justify-content-between">
+    <div class="icon-tag d-flex align-items-center gap-2">
+          <button
+                  class="btn rounded-3 p-2 bg-danger-subtle text-danger d-flex align-items-center back justify-content-center"
+                >
+<i class="fa-brands fa-pagelines"></i>    </button>
+       <span>
+        Fat
+</span> 
+   </div>
+<span class="fw-bold" id="fat">26g
+</span>
+</div>
+<div class="nutrition-icon p-3 rounded-3 d-flex mb-2 align-items-center justify-content-between">
+    <div class="icon-tag d-flex align-items-center gap-2">
+ <button class="btn rounded-3 p-2 bg-danger-subtle  d-flex align-items-center back justify-content-center"
+>
+<i class="fa-solid fa-cube" style="color: rgb(238, 21, 195);"></i>
+   </button>
+       <span>sodium
+</span> 
+   </div>
+<span class="fw-bold " id="sodium">5g</span>
+</div>
+</div>
+</div>
+
+
+
+
+                        </div>
+                    </div>
+
+<div
+                class="tab-pane fade"
+                id="nav-chef"
+                role="tabpanel"
+                aria-labelledby="nav-chef-tab"
+                tabindex="0"
+>
+<div class="chefs-tips-container " id="tips">
+  <div class="tip-card back mb-2 rounded-3 py-3">
+<i class="fa-solid fa-circle-check fs-5" style="color: #FFB900;"></i>
+    <span>Adjust spice level by using more or less curry paste</span>
+  </div>
+
+  <div class="tip-card back mb-2 rounded-3 py-3">
+<i class="fa-solid fa-circle-check fs-5" style="color: #FFB900;"></i>
+    <span>Add vegetables in stages based on cooking time needed</span>
+  </div>
+
+  <div class="tip-card back mb-2 rounded-3 py-3">
+<i class="fa-solid fa-circle-check fs-5" style="color: #FFB900;"></i>
+    <span>Fresh Thai basil is essential for authentic flavor</span>
+  </div>
+
+  <div class="tip-card back mb-2 rounded-3 py-3">
+<i class="fa-solid fa-circle-check fs-5" style="color: #FFB900;"></i>
+    <span>Use full-fat coconut milk for richest, creamiest sauce</span>
+  </div>
+</div>
+
+
+              </div>
+
+                </div>
+                 <hr />
+ <!-- ===============button=============== -->
+
+        <button id="rotate" onclick="rotate()" class="btn rotate text-light py-2 px-4 rounded-3 mt-1">
+    <i class="fa-solid fa-arrows-rotate"></i>
+    <span>Try Another Recipe</span>
+</button
+              </div>
+             
+            </div>
+            
+
+
+
+
+            
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+<li class="mb-4 ">
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
